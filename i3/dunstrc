@@ -1,0 +1,29 @@
+[global]
+# font = "Noto Sans CJK SC 15"   # 中文字体支持
+# corner_radius = 8              # 圆角边框
+# frame_color = "#4c7899"        # 边框颜色
+# separator_color = frame
+origin = top-center
+
+geometry = "300x100-20+20"
+transparency = 20
+background = "#1E1E2E80"
+foreground = "#CDD6F4"
+frame_color = "#89B4FA60"
+corner_radius = 12
+separator_color = "frame"
+padding = 12
+font = "JetBrains Mono Bold 15"
+
+[urgency_low]
+background = "#1E2e3440"
+foreground = "#d8dee9"
+timeout = 5
+
+[urgency_normal]
+background = "#1E3b4252"
+foreground = "#e5e9f0"
+
+[urgency_critical]
+background = "#bf616a"
+foreground = "#2e3440"

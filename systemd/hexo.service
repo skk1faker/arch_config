@@ -1,0 +1,10 @@
+[Unit]
+ Description=hexo Service
+
+[Service]
+ Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/home/skt1faker/.nvm/versions/node/v22.16.0/bin
+ Environment=NVM_DIR=/home/skt1faker/.nvm
+ ExecStart=bash /home/skt1faker/WorkPlace/website/start_hexo.sh
+
+[Install]
+ WantedBy=multi-user.target

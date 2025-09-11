@@ -1,0 +1,8 @@
+[Unit]
+ Description=clash Service
+
+[Service]
+ ExecStart=/home/skt1faker/configRepo/clash/clash -d /home/skt1faker/configRepo/clash/ > /tmp/clash_output
+
+[Install]
+ WantedBy=multi-user.target

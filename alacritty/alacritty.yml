@@ -1,0 +1,35 @@
+font:
+  normal:
+    family: monospace
+    style: Regular
+
+  bold:
+    family: monospace
+    style: Bold
+
+  italic:
+    family: monospace
+    style: Italic
+
+  bold_italic:
+    family: monospace
+    style: Bold Italic
+
+  size: 18
+
+env:
+  WINIT_X11_SCALE_FACTOR: "1.0"
+
+window:
+  opacity : 0.85  # 推荐 0.85~0.95，轻微半透明
+
+colors:
+  primary:
+    background: "#2E3440"
+    foreground: "#D8DEE9" 
+shell:
+  program: /bin/bash
+  args:
+    - --login
+    - --command
+    - "tmux new-session -A -D -s main"

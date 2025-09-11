@@ -1,0 +1,36 @@
+[general]
+import = [
+	# https://github.com/alacritty/alacritty-theme?tab=readme-ov-file
+    "/home/skt1faker/configRepo/alacritty/themes/themes/ayu_dark.toml"
+]
+
+[env]
+WINIT_X11_SCALE_FACTOR = "1.0"
+
+[font]
+size = 17
+
+[font.bold]
+family = "JetBrains Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetBrains Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "JetBrains Mono"
+style = "Italic"
+
+[font.normal]
+family = "JetBrains Mono"
+# style = "Regular"
+style = "Bold"
+
+[window]
+opacity = 0.92
+
+[terminal.shell]
+# args = ["--login", "-c", "tmux new-session -A -D -s 登峰造极"]
+args = ["--login", "-c", "tmux new-session"]
+program = "/bin/zsh"
