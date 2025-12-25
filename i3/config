@@ -152,8 +152,8 @@ bindsym $mod+Ctrl+Left workspace prev
 # set $ws5 "5:  Shutter"
 set $ws1 "1: Terminal"
 set $ws2 "2: Firefox"
-set $ws3 "3: Note"
-set $ws4 "4: Spotify"
+set $ws3 "4: Note"
+set $ws4 "4: Steam"
 set $ws5 "5: Mail"
 set $ws6 "6: Obs"
 set $ws7 "7"
@@ -330,7 +330,11 @@ set_from_resource $term_color15    color15
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 
 # set output rate and mode 
-exec_always xrandr --output HDMI-A-0 --mode 2560x1440 --rate 143.91
+# amd核显
+# exec_always xrandr --output HDMI-A-0 --mode 2560x1440 --rate 143.91
+# 独立显卡
+# exec_always xrandr --output HDMI-0 --mode 2560x1440 --rate 143.91  
+exec_always xrandr --output DP-4 --mode 2560x1440 --rate 165 
 
 set $focused-ws #523d6480
 set $bar-color  #523d640D
@@ -374,10 +378,16 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-  client.focused          #556064 #556064 #80FFF9 #FDF6E3
-  client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
-  client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
-  client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
+#   client.focused          #556064 #556064 #80FFF9 #FDF6E3
+#   client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
+#   client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
+#   client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
+# deep color
+  client.focused #4c7899 #285577 #ffffff #2e9ef4
+  client.focused_inactive #333333 #5f676a #ffffff #484e50
+  client.unfocused #333333 #222222 #888888 #292d2e
+  client.urgent #2f343a #900000 #ffffff #900000
+
   client.placeholder      #000000 #0c0c0c #ffffff #000000 
 
   client.background       #2B2C2B
@@ -440,7 +450,8 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpaper/acm-icpc.png
+# exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpaper/acm-icpc.png
+exec_always --no-startup-id feh --randomize --bg-fill ~/Pictures/wallpaper/jerry.png
 
 # ranger # wen jian guan li qi 
 # nemo # wen jian guan li qi 
@@ -457,9 +468,11 @@ bindsym $mod+l exec /home/skt1faker/configRepo/lock/sleep
 # https://zjuyk.site/i3wm-userguide-zh/%E9%85%8D%E7%BD%AEi3/%E8%87%AA%E5%8A%A8%E5%B0%86%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%94%BE%E5%88%B0%E6%8C%87%E5%AE%9A%E5%B7%A5%E4%BD%9C%E5%8C%BA.html
 assign [class="^Alacritty$"] $ws1
 assign [class="^firefox$"] $ws2
-assign [class="^spotify$"] $ws4
+assign [class="^spotify$"] $ws3
+assign [class="^steam$"] $ws4
 assign [class="^thunderbird$"] $ws5
 assign [class="^obs$"] $ws6
+
 # assign [class="^MAIL$"] $ws5
 
 exec_always picom -f

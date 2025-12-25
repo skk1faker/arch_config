@@ -1,0 +1,13 @@
+/* 全局深色背景 + 白色文本 */
+* {
+	background-color: #1a1a1a !important; /* 深灰色背景，可换成 #000000 纯黑 */
+	color: #ffffff !important;            /* 白色文本，确保可读性 */
+	border-color: #333333 !important;     /* 边框用深灰，避免刺眼 */
+}
+
+/* 按钮、输入框等控件单独优化（避免样式混乱） */
+button, entry, textview {
+	background-color: #2d2d2d !important;
+	color: #ffffff !important;
+}
+

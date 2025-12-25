@@ -1,0 +1,12 @@
+[diff]
+	tool = meld
+[difftool "meld"]
+	cmd = meld "$LOCAL" "$REMOTE"
+	prompt = false
+[user]
+	email = skk1faker@163.com
+	name = T1faker
+
+
+[alias]
+	dif = difftool --dir-diff
